@@ -23,11 +23,11 @@ void linux :: add_file(string name, double size){
 
 BTreeNode* linux::search_file(string name, double size){
     File temp = File(name, size);
-    return os_btree.search(temp);
+    return linux_btree.search(temp);
 }
 
 void linux::show_files(){
-    os_btree.traverse();
+    linux_btree.traverse();
 }
 
 void linux::remove(File file){
